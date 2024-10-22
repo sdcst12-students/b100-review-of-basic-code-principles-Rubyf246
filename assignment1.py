@@ -13,3 +13,12 @@ Your program should ask the user for
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
 """
+
+#!python3
+
+P = int(input("Enter a principal amount: "))
+pr = int(input("Enter the percentage rate: "))
+t = int(input("Enter the time in years rate: "))
+r = pr/100
+I = P*r*t
+print (f'You simple interest is {I}')
