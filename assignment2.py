@@ -22,4 +22,9 @@ rate: 5%
 final balance: 1320.68
 
 """
+P = (int(input("Enter your intitial investment : ")))
+r = (int(input("Enter the rate : ")))
+t = (int(input("Enter the time : ")))
 
+
+formula = (P*r)+ P
