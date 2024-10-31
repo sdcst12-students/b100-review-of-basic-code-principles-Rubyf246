@@ -22,9 +22,17 @@ rate: 5%
 final balance: 1320.68
 
 """
-P = (int(input("Enter your intitial investment : ")))
-r = (int(input("Enter the rate : ")))
-t = (int(input("Enter the time : ")))
+
+P = float(input("Enter the intitial investment: "))
+r = float(input("Enter the interest rate (in %): "))
+t = int(input("Enter the number of years: "))
+
+total_balance = 0.0 
 
 
-formula = (P*r)+ P
+for year in range(1, t + 1):
+    total_balance += P  
+    interest = total_balance * (r/ 100)  
+    total_balance += interest  
+
+print(f"\nFinal balance after {t} years: {total_balance:.2f}")

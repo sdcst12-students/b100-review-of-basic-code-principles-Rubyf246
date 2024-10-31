@@ -22,3 +22,29 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+P= float(input("Enter the initial debt amount: "))
+r= float(input("Enter the annual interest rate (in %): "))
+t = float(input("Enter the annual payment amount: "))
+
+
+yearinterest_rate = P / 100
+
+years = 0 
+total_interest_paid = 0.0  
+
+while initial_debt > 0:
+
+    interest = initial_debt * yearinterest_rate
+    total_interest_paid += interest 
+    initial_debt += interest  
+    
+    
+    initial_debt -= t
+    years += 1 
+    
+    if initial_debt < 0:
+        initial_debt = 0
+
+
+print(f"\nIt will take {years} years to pay off the debt.")
+print(f"Total interest paid: {total_interest_paid:.2f}")
